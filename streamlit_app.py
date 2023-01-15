@@ -82,17 +82,28 @@ for skill in skill_list:
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
 
-if st.button("Which class am I"):
-    for ind_skill in selected_skill_list[0]:
-        new_user_skill_df[f"{ind_skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
+col1, col2, col3 = st.columns(3)
+my_bar = st.progress(0)
 
-    new_user_skill_df.drop(columns="skills", inplace=True)
+from PIL import Image
+image = Image.open('background_image.jpg')
+st.image(image, use_column_width="always")
+with col2:
+    if st.button("Which class am I"):
+        for ind_skill in selected_skill_list[0]:
+            new_user_skill_df[f"{ind_skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
 
-    new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
+        new_user_skill_df.drop(columns="skills", inplace=True)
 
-    new_user_pred = model.predict(new_user_df)
+        new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
 
-    st.write(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred[0]}".upper())
+        new_user_pred = model.predict(new_user_df)
+
+        st.write(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred[0]}".upper())
 
 
 st.markdown("<h3 style='text-align: center; color: #1C9B41;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
+
+
+
+
