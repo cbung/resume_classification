@@ -15,35 +15,47 @@ st.markdown(
 
 option_xp_lvl = st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
 if option_xp_lvl == '0-24 Months':
-    option_xp_lvl = "Junior"
+    option_junior = 1
+    option_mid = 0
+    option_senior = 0
+    option_master = 0
 elif option_xp_lvl == '24-60 Months':
-    option_xp_lvl = "Mid"
+    option_junior = 0
+    option_mid = 1
+    option_senior = 0
+    option_master = 0
 elif option_xp_lvl == '60-120 Months':
-    option_xp_lvl = "Senior"
+    option_junior = 0
+    option_mid = 0
+    option_senior = 1
+    option_master = 0
 else:
-    option_xp_lvl = "Master"
-
-# st.sidebar.header("Months Of Experience")
-# option_junior = st.sidebar.checkbox('0-24 Months')
-# option_mid = st.sidebar.checkbox('24-60 Months')
-# option_senior = st.sidebar.checkbox('60-120 Months')
-# option_master = st.sidebar.checkbox('More Than 120 Months')
-
-# option_xp_lvl = st.sidebar.radio('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
+    option_junior = 0
+    option_mid = 0
+    option_senior = 0
+    option_master = 1
 
 option_highest_degree = st.sidebar.selectbox('Highest Academic Degree:', ("Bachelor's Degree", "Master's Degree", "Doctorate Degree", "Other"))
 if option_highest_degree == "Bachelor's Degree":
-    st.write(option_highest_degree)
-    # option_highest_degree = "bachelor"
+    option_bachelors = 1
+    option_doctors = 0
+    option_masters = 0
+    option_others = 0
 elif option_highest_degree == "Doctorate Degree":
-    st.write(option_highest_degree)
-    # option_highest_degree = "doctor"
+    option_bachelors = 0
+    option_doctors = 1
+    option_masters = 0
+    option_others = 0
 elif option_highest_degree == "Master's Degree":
-    st.write(option_highest_degree)
-    # option_highest_degree = "master"
+    option_bachelors = 0
+    option_doctors = 0
+    option_masters = 1
+    option_others = 0
 else:
-    st.write(option_highest_degree)
-    # option_highest_degree = "other"
+    option_bachelors = 0
+    option_doctors = 0
+    option_masters = 0
+    option_others = 1
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
 
@@ -55,9 +67,12 @@ for ind_skill in enumerate(option_skills):
 
 
 new_user = {
-    "NEW_HIGHEST_DEGREE_doctor": option_highest_degree,
-    "NEW_HIGHEST_DEGREE_master": option_highest_degree,
-    "NEW_EXPERIENCE_LEVEL": option_xp_lvl,
+    "NEW_HIGHEST_DEGREE_doctor": option_doctors,
+    "NEW_HIGHEST_DEGREE_master": option_masters,
+    "NEW_HIGHEST_DEGREE_other": option_others,
+    "NEW_EXPERIENCE_LEVEL_Mid": option_mid,
+    "NEW_EXPERIENCE_LEVEL_Senior": option_senior,
+    "NEW_EXPERIENCE_LEVEL_Master": option_master,
     "skills": selected_skill_list
 }
 
