@@ -65,33 +65,33 @@ selected_skill_list = [[]]
 for ind_skill in enumerate(option_skills):
     selected_skill_list[0].append(f"SKILL_{ind_skill[1]}")
 
-
-new_user = {
+new_user_xp_edu = {
     "NEW_HIGHEST_DEGREE_doctor": option_doctors,
     "NEW_HIGHEST_DEGREE_master": option_masters,
     "NEW_HIGHEST_DEGREE_other": option_others,
     "NEW_EXPERIENCE_LEVEL_Mid": option_mid,
     "NEW_EXPERIENCE_LEVEL_Senior": option_senior,
     "NEW_EXPERIENCE_LEVEL_Master": option_master,
-    "skills": selected_skill_list
 }
 
-new_user_df = pd.DataFrame(new_user)
+new_user_skill = {"skills": selected_skill_list}
+new_user
+new_user_skill_df = pd.DataFrame(new_user_skill)
 
 newframe = pd.DataFrame()
 for skill in skill_list:
-    newframe[f"SKILL_{skill}".upper()] = new_user_df["skills"].apply(lambda x: 0)
+    newframe[f"SKILL_{skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 0)
 
-new_user_df = pd.concat([new_user_df, newframe], axis=1)
+new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
 if st.sidebar.button("Save Choices"):
     for ind_skill in selected_skill_list[0]:
-        new_user_df[f"{ind_skill}".upper()] = new_user_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
+        new_user_skill_df[f"{ind_skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
 
-    new_user_df.drop(columns="skills", inplace=True)
+    new_user_skill_df.drop(columns="skills", inplace=True)
 
-    ohe_cols = [col for col in new_user_df.columns if (col.__contains__("NEW_"))]
-    new_user_df = pd.get_dummies(new_user_df, columns=ohe_cols, drop_first=True)
+    new_user_xo_edu_df = pd.DataFrame(new_user_xp_edu)
+    new_user_df = pd.concat([new_user_skill_df, new_user_xo_edu_df], axis=1)
 
     # new_user_pred = model.predict(new_user_df)
 
