@@ -65,7 +65,7 @@ new_user_xp_edu = {
     "NEW_EXPERIENCE_LEVEL_Senior": option_senior,
     "NEW_EXPERIENCE_LEVEL_Master": option_master
 }
-new_user_xp_edu_df = pd.DataFrame(new_user_xp_edu)
+new_user_xp_edu_df = pd.DataFrame(new_user_xp_edu, index=[0])
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
 option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, [], max_selections=100)
