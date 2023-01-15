@@ -39,10 +39,16 @@ else:
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
 
-option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, ["SQL"], max_selections=100)
+option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, [], max_selections=100)
 
 selected_skill_list = []
 for ind_skill in enumerate(option_skills):
     selected_skill_list.append(f"SKILL_{ind_skill[1]}")
 
-st.write("Your Skills: ", selected_skill_list)
+new_user = {
+    "NEW_EXPERIENCE_LEVEL": option_xp_lvl,
+    "NEW_HIGHEST_DEGREE": option_highest_degree,
+    "skills": selected_skill_list
+}
+
+st.write("You: ", new_user)
