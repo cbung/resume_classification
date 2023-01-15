@@ -105,10 +105,10 @@ with col2:
 
         st.success(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred[0]}".upper())
 
-with col2:
-    if st.button("Learn More About The Classes"):
-        with col1:
-            st.markdown("<h3 style='text-align: center; color: #1C9B41;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
+
+if st.button("Learn More About The Classes"):
+    with col1:
+        st.markdown("<h3 style='text-align: center; color: #1C9B41;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
 
 
 
