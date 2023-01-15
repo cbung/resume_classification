@@ -89,7 +89,7 @@ from PIL import Image
 image = Image.open('background_image.jpg')
 st.image(image, use_column_width="always")
 with col2:
-    if st.button("\tWhich class am I\t"):
+    if st.button("\t", "Which class am I", "\t"):
         for ind_skill in selected_skill_list[0]:
             new_user_skill_df[f"{ind_skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
 
