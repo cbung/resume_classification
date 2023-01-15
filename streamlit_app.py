@@ -78,7 +78,7 @@ new_user_skill = {"skills": selected_skill_list}
 
 new_user_skill_df = pd.DataFrame(new_user_skill)
 
-# newframe = pd.DataFrame()
+newframe = pd.DataFrame()
 for skill in skill_list:
     newframe[f"SKILL_{skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 0)
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
