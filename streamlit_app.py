@@ -90,9 +90,9 @@ if st.sidebar.button("Save Choices"):
 
     new_user_skill_df.drop(columns="skills", inplace=True)
 
-    st.write("newuser: ", new_user_skill_df.columns, "df: ", df.columns)
-
     new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
+
+    st.write("newuser: ", new_user_df.columns, "df: ", df.columns)
 
     # new_user_pred = model.predict(new_user_df)
 
