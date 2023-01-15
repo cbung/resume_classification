@@ -26,9 +26,9 @@ else:
 option_highest_degree = st.sidebar.selectbox('Highest Academic Degree:', ("Bachelor's Degree", "Master's Degree", "Doctorate Degree", "Other"))
 if option_highest_degree == "Bachelor's Degree":
     option_highest_degree = "bachelor"
-elif option_highest_degree == "Master's Degree":
-    option_highest_degree = "master"
 elif option_highest_degree == "Doctorate Degree":
+    option_highest_degree = "doctor"
+elif option_highest_degree == "Master's Degree":
     option_highest_degree = "doctor"
 else:
     option_highest_degree = "other"
@@ -59,9 +59,7 @@ new_user_df = pd.concat([new_user_df, newframe], axis=1)
 if st.sidebar.button("Save Choices"):
     for ind_skill in selected_skill_list[0]:
         new_user_df[f"{ind_skill}".upper()] = new_user_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
-
     new_user_df.drop(columns="skills", inplace=True)
+    new_user_df = pd.get_dummies(new_user_df, columns=[col for col in new_user_df.columns if (col.__contains__("NEW_"))], drop_first=True)
 
-    df = df.concat([df, new_user_df], axis=0)
-
-    st.write("You: ", df)
+    st.write("You: ", new_user_df)
