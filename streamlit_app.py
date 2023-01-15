@@ -75,7 +75,7 @@ new_user_xp_edu = {
 }
 
 new_user_skill = {"skills": selected_skill_list}
-new_user
+
 new_user_skill_df = pd.DataFrame(new_user_skill)
 
 newframe = pd.DataFrame()
