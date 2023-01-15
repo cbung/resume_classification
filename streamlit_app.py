@@ -107,7 +107,7 @@ with col2:
 
 
 if st.button("Learn More About The Classes"):
-    st.markdown("<h3 style='text-align: center; color: #1C9B41;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>", unsafe_allow_html=True)
 
 
 
