@@ -5,7 +5,7 @@ import pandas as pd
 from helper import *
 
 model = joblib.load("final_model.pkl")
-df = pd.read_csv("final_dataframe.csv")
+df = pd.read_csv("final_dataframe.csv").drop(columns="Unnamed: 0")
 
 st.markdown("<h1 style='text-align: center; color: ##00a6f9;'>Will Google Hire You?</h1>",
             unsafe_allow_html=True)
@@ -60,7 +60,7 @@ if st.sidebar.button("Save Choices"):
     for ind_skill in selected_skill_list[0]:
         new_user_df[f"{ind_skill}".upper()] = new_user_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
     new_user_df.drop(columns="skills", inplace=True)
-    new_user_df = pd.get_dummies(new_user_df, columns=[col for col in new_user_df.columns if (col.__contains__("NEW_"))], drop_first=True)
+    # new_user_df = pd.get_dummies(new_user_df, columns=[col for col in new_user_df.columns if (col.__contains__("NEW_"))], drop_first=True)
 
     # new_user_pred = model.predict(new_user_df)
 
