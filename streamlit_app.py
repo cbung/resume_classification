@@ -82,7 +82,7 @@ for skill in skill_list:
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
 
-if st.sidebar.button("Save Choices"):
+if st.button("Save Choices"):
     for ind_skill in selected_skill_list[0]:
         new_user_skill_df[f"{ind_skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
 
