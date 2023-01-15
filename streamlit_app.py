@@ -100,12 +100,15 @@ with col2:
         for percent_complete in range(100):
             time.sleep(0.02)
             my_bar.progress(percent_complete + 1)
+
         new_user_pred = model.predict(new_user_df)
 
         st.success(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred[0]}".upper())
 
-
-st.markdown("<h3 style='text-align: center; color: #1C9B41;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
+with col2:
+    if st.button("Learn More About The Classes"):
+        with col1:
+            st.markdown("<h3 style='text-align: center; color: #1C9B41;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
 
 
 
