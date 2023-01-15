@@ -22,13 +22,13 @@ st.markdown(
 #     option_xp_lvl = "Senior"
 # else:
 #     option_xp_lvl = "Master"
-#
-# option_junior = st.sidebar.checkbox('0-24 Months')
-# option_mid = st.sidebar.checkbox('24-60 Months')
-# option_senior = st.sidebar.checkbox('60-120 Months')
-# option_master = st.sidebar.checkbox('More Than 120 Months')
 
-option_xp_lvl = st.sidebar.radio('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
+option_junior = st.sidebar.checkbox('0-24 Months')
+option_mid = st.sidebar.checkbox('24-60 Months')
+option_senior = st.sidebar.checkbox('60-120 Months')
+option_master = st.sidebar.checkbox('More Than 120 Months')
+
+# option_xp_lvl = st.sidebar.radio('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
 
 option_highest_degree = st.sidebar.selectbox('Highest Academic Degree:', ("Bachelor's Degree", "Master's Degree", "Doctorate Degree", "Other"))
 if option_highest_degree == "Bachelor's Degree":
