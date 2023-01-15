@@ -62,6 +62,6 @@ if st.sidebar.button("Save Choices"):
     new_user_df.drop(columns="skills", inplace=True)
     new_user_df = pd.get_dummies(new_user_df, columns=[col for col in new_user_df.columns if (col.__contains__("NEW_"))], drop_first=True)
 
-    new_user_pred = model.predict(new_user_df)
+    # new_user_pred = model.predict(new_user_df)
 
-    st.write("You: ", new_user_pred)
+    st.write("newuser: ", new_user_df.shape[1], "df: ", df.shape[1])
