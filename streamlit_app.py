@@ -33,13 +33,14 @@ else:
 
 option_highest_degree = st.sidebar.selectbox('Highest Academic Degree:', ("Bachelor's Degree", "Master's Degree", "Doctorate Degree", "Other"))
 if option_highest_degree == "Bachelor's Degree":
-    option_highest_degree = "bachelor"
+    st.write(option_highest_degree)
+    # option_highest_degree = "bachelor"
 elif option_highest_degree == "Doctorate Degree":
-    option_highest_degree = "doctor"
+    # option_highest_degree = "doctor"
 elif option_highest_degree == "Master's Degree":
-    option_highest_degree = "doctor"
+    # option_highest_degree = "master"
 else:
-    option_highest_degree = "other"
+    # option_highest_degree = "other"
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
 
@@ -51,7 +52,8 @@ for ind_skill in enumerate(option_skills):
 
 
 new_user = {
-    "NEW_HIGHEST_DEGREE": option_highest_degree,
+    "NEW_HIGHEST_DEGREE_doctor": option_highest_degree,
+    "NEW_HIGHEST_DEGREE_master": option_highest_degree,
     "NEW_EXPERIENCE_LEVEL": option_xp_lvl,
     "skills": selected_skill_list
 }
