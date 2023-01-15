@@ -108,9 +108,29 @@ with col2:
 
 all_segments = list(set(df["SEGMENT"].to_list()))
 if st.button("Learn More About The Classes"):
-    for segment in all_segments:
+    for indx, segment in enumerate(all_segments):
         st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {segment}</h3>", unsafe_allow_html=True)
-
+        if segment == 0:
+            st.write("Açıklama 0")
+            # break
+        elif segment == 1:
+            st.write("Açıklama 1")
+        elif segment == 2:
+            st.write("Açıklama 2")
+        elif segment == 3:
+            st.write("Açıklama 3")
+        elif segment == 4:
+            st.write("Açıklama 4")
+        elif segment == 5:
+            st.write("Açıklama 5")
+        elif segment == 6:
+            st.write("Açıklama 6")
+        elif segment == 7:
+            st.write("Açıklama 7")
+        elif segment == 8:
+            st.write("Açıklama 8")
+        else:
+            st.write("Açıklama 9")
 
 
 
