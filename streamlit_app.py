@@ -97,5 +97,5 @@ st.markdown(""" div.stButton > button:first-child {
 background-color: #00cc00;color:white;font-size:20px;height:3em;width:30em;border-radius:10px 10px 10px 10px;
 }
 """, unsafe_allow_html=True)
-
+st.button("the notice you want to show")
 st.markdown("<h3 style='text-align: center; color: #1C9B41;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
