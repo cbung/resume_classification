@@ -36,10 +36,13 @@ if option_highest_degree == "Bachelor's Degree":
     st.write(option_highest_degree)
     # option_highest_degree = "bachelor"
 elif option_highest_degree == "Doctorate Degree":
+    st.write(option_highest_degree)
     # option_highest_degree = "doctor"
 elif option_highest_degree == "Master's Degree":
+    st.write(option_highest_degree)
     # option_highest_degree = "master"
 else:
+    st.write(option_highest_degree)
     # option_highest_degree = "other"
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
