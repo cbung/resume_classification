@@ -49,14 +49,14 @@ new_user = {
 
 new_user_df = pd.DataFrame(new_user)
 
+
+for ind_skill in skill_list:
+    newframe = pd.DataFrame()
+    newframe[f"SKILL_{ind_skill}".upper()] = new_user_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
+    new_user_df = pd.concat([new_user_df, newframe], axis=1)
+
+
 st.write("You: ", new_user_df)
-
-# for ind_skill in selected_skill_list:
-#     newframe = pd.DataFrame()
-#     newframe[f"SKILL_{ind_skill}".upper()] = dataframe["skills"].apply(lambda x: 1 if ind_skill in x else 0)
-#     dataframe = pd.concat([dataframe, newframe], axis=1)
-
-
 
 
 
