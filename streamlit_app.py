@@ -36,6 +36,9 @@ elif option_highest_degree == "Doctorate Degree":
 else:
     option_highest_degree = "other"
 
-option_skills = st.sidebar.multiselect("Skills:", ["Tea", "Coffee", "Iced Tea", "Diet Coke", "Lemonade"], [])
+
+skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
+
+option_skills = st.sidebar.multiselect("Skills:", skill_list, [])
 
 
