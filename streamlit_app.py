@@ -69,7 +69,7 @@ new_user_xp_edu = {
     "NEW_HIGHEST_DEGREE_other": option_others,
     "NEW_EXPERIENCE_LEVEL_Mid": option_mid,
     "NEW_EXPERIENCE_LEVEL_Senior": option_senior,
-    "NEW_EXPERIENCE_LEVEL_Master": option_master,
+    "NEW_EXPERIENCE_LEVEL_Master": option_master
 }
 
 new_user_skill = {"skills": selected_skill_list}
