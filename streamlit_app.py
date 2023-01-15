@@ -60,7 +60,6 @@ else:
 new_user_xp_edu = {
     "NEW_HIGHEST_DEGREE_doctor": option_doctors,
     "NEW_HIGHEST_DEGREE_master": option_masters,
-    "NEW_HIGHEST_DEGREE_other": option_others,
     "NEW_EXPERIENCE_LEVEL_Mid": option_mid,
     "NEW_EXPERIENCE_LEVEL_Senior": option_senior,
     "NEW_EXPERIENCE_LEVEL_Master": option_master
