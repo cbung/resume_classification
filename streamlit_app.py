@@ -36,26 +36,18 @@ else:
     option_master = 1
 
 option_highest_degree = st.sidebar.selectbox('Highest Academic Degree:', ("Bachelor's Degree", "Master's Degree", "Doctorate Degree", "Other"))
-if option_highest_degree == "Bachelor's Degree":
-    option_bachelors = 1
-    option_doctors = 0
-    option_masters = 0
-    option_others = 0
-elif option_highest_degree == "Doctorate Degree":
+if option_highest_degree == "Doctorate Degree":
     option_bachelors = 0
     option_doctors = 1
     option_masters = 0
-    option_others = 0
 elif option_highest_degree == "Master's Degree":
     option_bachelors = 0
     option_doctors = 0
     option_masters = 1
-    option_others = 0
 else:
-    option_bachelors = 0
+    option_bachelors = 1
     option_doctors = 0
     option_masters = 0
-    option_others = 1
 
 new_user_xp_edu = {
     "NEW_HIGHEST_DEGREE_doctor": option_doctors,
