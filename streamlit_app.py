@@ -13,21 +13,21 @@ st.markdown(
     "<h5 style='text-align: center; color: #1B9E91;'>We use data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. We then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and determine in which predetermined class they fall.</h5>",
     unsafe_allow_html=True)
 
-# option_xp_lvl = st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
-# if option_xp_lvl == '0-24 Months':
-#     option_xp_lvl = "Junior"
-# elif option_xp_lvl == '24-60 Months':
-#     option_xp_lvl = "Mid"
-# elif option_xp_lvl == '60-120 Months':
-#     option_xp_lvl = "Senior"
-# else:
-#     option_xp_lvl = "Master"
+option_xp_lvl = st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
+if option_xp_lvl == '0-24 Months':
+    option_xp_lvl = "Junior"
+elif option_xp_lvl == '24-60 Months':
+    option_xp_lvl = "Mid"
+elif option_xp_lvl == '60-120 Months':
+    option_xp_lvl = "Senior"
+else:
+    option_xp_lvl = "Master"
 
-st.sidebar.header("Months Of Experience")
-option_junior = st.sidebar.checkbox('0-24 Months')
-option_mid = st.sidebar.checkbox('24-60 Months')
-option_senior = st.sidebar.checkbox('60-120 Months')
-option_master = st.sidebar.checkbox('More Than 120 Months')
+# st.sidebar.header("Months Of Experience")
+# option_junior = st.sidebar.checkbox('0-24 Months')
+# option_mid = st.sidebar.checkbox('24-60 Months')
+# option_senior = st.sidebar.checkbox('60-120 Months')
+# option_master = st.sidebar.checkbox('More Than 120 Months')
 
 # option_xp_lvl = st.sidebar.radio('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
 
