@@ -92,4 +92,4 @@ if st.sidebar.button("Save Choices"):
 
     new_user_pred = model.predict(new_user_df)
 
-    st.write(f"{option_xp_lvl}, {new_user_pred}, {option_highest_degree}".upper())
+    st.write(f"{option_xp_lvl}, {new_user_pred[0]}, {option_highest_degree}".upper())
