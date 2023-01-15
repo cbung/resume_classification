@@ -51,4 +51,6 @@ new_user = {
     "skills": selected_skill_list
 }
 
+new_user = pd.Series(new_user)
+
 st.write("You: ", new_user)
