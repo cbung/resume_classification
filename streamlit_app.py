@@ -65,7 +65,7 @@ new_user_xp_edu = {
     "NEW_EXPERIENCE_LEVEL_Senior": option_senior,
     "NEW_EXPERIENCE_LEVEL_Master": option_master
 }
-# new_user_xp_edu_df = pd.DataFrame(new_user_xp_edu)
+new_user_xp_edu_df = pd.DataFrame(new_user_xp_edu)
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
 option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, [], max_selections=100)
@@ -92,7 +92,7 @@ if st.sidebar.button("Save Choices"):
 
     st.write("newuser: ", new_user_skill_df.columns, "df: ", df.columns)
 
-    # new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
+    new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
 
     # new_user_pred = model.predict(new_user_df)
 
