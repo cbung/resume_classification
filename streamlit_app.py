@@ -43,7 +43,7 @@ for ind_skill in enumerate(option_skills):
 
 for ind_skill in skill_list:
     newframe = pd.DataFrame()
-    newframe[f"SKILL_{ind_skill}".upper()] = new_user_df["skills"].apply(lambda x: 0)
+    newframe[f"SKILL_{ind_skill}".upper()] = new_user_df["skills"].apply(lambda x: 0 if ind_skill in x else 0)
     new_user_df = pd.concat([new_user_df, newframe], axis=1)
 
 if st.sidebar.button("Save Choices"):
