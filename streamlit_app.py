@@ -12,7 +12,25 @@ st.markdown("<h1 style='text-align: center; color: ##00a6f9;'>Will Google Hire Y
 st.markdown("<h5 style='text-align: center; color: #1B9E91;'>We use data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. We then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and determine in which predetermined class they fall.</h5>",
             unsafe_allow_html=True)
 
-st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
+option_xp_lvl = st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
+if option_xp_lvl == '0-24 Months':
+    option_xp_lvl = "Junior"
+elif option_xp_lvl == '24-60 Months':
+    option_xp_lvl = "Mid"
+elif option_xp_lvl == '60-120 Months':
+    option_xp_lvl = "Senior"
+else:
+    option_xp_lvl = "Master"
+
+option_highest_degree = st.sidebar.selectbox('Highest Academic Degree:', ("Bachelor's Degree", "Master's Degree", "Doctorate Degree", "Other"))
+if option_highest_degree == "Bachelor's Degree":
+    option_highest_degree = "bachelor"
+elif option_highest_degree == "Master's Degree":
+    option_highest_degree = "master"
+elif option_highest_degree == "Doctorate Degree":
+    option_highest_degree = "doctor"
+else:
+    option_highest_degree = "other"
 
 
 
