@@ -82,7 +82,7 @@ for skill in skill_list:
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
 
-if st.button("Which am I"):
+if st.button("Which class am I"):
     for ind_skill in selected_skill_list[0]:
         new_user_skill_df[f"{ind_skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
 
@@ -93,3 +93,5 @@ if st.button("Which am I"):
     new_user_pred = model.predict(new_user_df)
 
     st.write(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred[0]}".upper())
+
+if st.markdown("<h3 style='text-align: center; color: red;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
