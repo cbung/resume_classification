@@ -57,12 +57,6 @@ else:
     option_masters = 0
     option_others = 1
 
-skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
-option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, [], max_selections=100)
-selected_skill_list = [[]]
-for ind_skill in enumerate(option_skills):
-    selected_skill_list[0].append(f"SKILL_{ind_skill[1]}")
-
 new_user_xp_edu = {
     "NEW_HIGHEST_DEGREE_doctor": option_doctors,
     "NEW_HIGHEST_DEGREE_master": option_masters,
@@ -71,6 +65,14 @@ new_user_xp_edu = {
     "NEW_EXPERIENCE_LEVEL_Senior": option_senior,
     "NEW_EXPERIENCE_LEVEL_Master": option_master
 }
+new_user_xp_edu_df = pd.DataFrame(new_user_xp_edu)
+
+skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
+option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, [], max_selections=100)
+selected_skill_list = [[]]
+for ind_skill in enumerate(option_skills):
+    selected_skill_list[0].append(f"SKILL_{ind_skill[1]}")
+
 
 new_user_skill = {"skills": selected_skill_list}
 
@@ -88,7 +90,6 @@ if st.sidebar.button("Save Choices"):
 
     new_user_skill_df.drop(columns="skills", inplace=True)
 
-    new_user_xp_edu_df = pd.DataFrame(new_user_xp_edu)
 
     # new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
 
