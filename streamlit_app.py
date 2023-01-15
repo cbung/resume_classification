@@ -87,4 +87,4 @@ if st.sidebar.button("Save Choices"):
 
     new_user_pred = model.predict(new_user_df)
 
-    st.write(new_user_df)
+    st.write(new_user_pred)
