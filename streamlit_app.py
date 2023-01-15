@@ -41,7 +41,7 @@ selected_skill_list = [[]]
 for ind_skill in enumerate(option_skills):
     selected_skill_list[0].append(f"SKILL_{ind_skill[1]}")
 
-if st.sidebar.button(["Save Choices"]):
+if st.sidebar.button("Save Choices"):
     new_user = {
         "NEW_EXPERIENCE_LEVEL": option_xp_lvl,
         "NEW_HIGHEST_DEGREE": option_highest_degree,
