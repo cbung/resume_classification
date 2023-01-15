@@ -1,4 +1,4 @@
-# import time
+import time
 import streamlit as st
 import joblib
 import pandas as pd
