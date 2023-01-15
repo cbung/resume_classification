@@ -94,4 +94,4 @@ if st.button("Which class am I"):
 
     st.write(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred[0]}".upper())
 
-if st.markdown("<h3 style='text-align: center; color: red;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: red;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
