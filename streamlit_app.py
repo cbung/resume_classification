@@ -59,6 +59,6 @@ new_user_df = pd.concat([new_user_df, newframe], axis=1)
 if st.sidebar.button("Save Choices"):
 
     for ind_skill in selected_skill_list[0]:
-        new_user_df[f"SKILL_{ind_skill}".upper()] = new_user_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
+        new_user_df[f"{ind_skill}".upper()] = new_user_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
 
     st.write("You: ", new_user_df)
