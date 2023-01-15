@@ -41,8 +41,6 @@ skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
 
 option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, ["SQL"], max_selections=100)
 
-selected_skill_list = []
-for i, ind_skill in enumerate(option_skills):
-    selected_skill_list.append(f"SKILL_{ind_skill[0]}")
 
-st.write("Your Skills: ", selected_skill_list)
+
+st.write("Your Skills: ", option_skills)
