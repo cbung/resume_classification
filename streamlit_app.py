@@ -56,7 +56,7 @@ if st.sidebar.button(["Save Choices"]):
         new_user_df = pd.concat([new_user_df, newframe], axis=1)
 
 
-st.write("You: ", new_user_df)
+    st.write("You: ", new_user_df)
 
 
 
