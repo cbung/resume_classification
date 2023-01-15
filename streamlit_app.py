@@ -106,8 +106,10 @@ with col2:
         st.success(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred[0]}".upper())
 
 
+all_segments = df["SEGMENT"].unique().to_list()
 if st.button("Learn More About The Classes"):
-    st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>", unsafe_allow_html=True)
+    for segment in all_segments:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {segment}</h3>", unsafe_allow_html=True)
 
 
 
