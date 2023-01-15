@@ -112,7 +112,6 @@ if st.button("Learn More About The Classes"):
         st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
                     unsafe_allow_html=True)
         st.write("Açıklama 0")
-        # break
     elif new_user_pred[0] == 1:
         st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
                     unsafe_allow_html=True)
