@@ -58,9 +58,7 @@ else:
     option_others = 1
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
-
 option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, [], max_selections=100)
-
 selected_skill_list = [[]]
 for ind_skill in enumerate(option_skills):
     selected_skill_list[0].append(f"SKILL_{ind_skill[1]}")
@@ -91,6 +89,7 @@ if st.sidebar.button("Save Choices"):
     new_user_skill_df.drop(columns="skills", inplace=True)
 
     new_user_xp_edu_df = pd.DataFrame(new_user_xp_edu)
+
     new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
 
     # new_user_pred = model.predict(new_user_df)
