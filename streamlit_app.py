@@ -32,6 +32,6 @@ elif option_highest_degree == "Doctorate Degree":
 else:
     option_highest_degree = "other"
 
-
+option_skills = st.multiselect("Skills:", ["Tea", "Coffee", "Iced Tea", "Diet Coke", "Lemonade"], ["Tea", "Coffee"])
 
 
