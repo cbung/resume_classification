@@ -7,10 +7,10 @@ from helper import *
 model = joblib.load("final_model.pkl")
 df = pd.read_csv("final_dataframe.csv").drop(columns="Unnamed: 0")
 
-st.markdown("<h1 style='text-align: center; color: #FFE77A;'>Will Google Hire You?</h1>",
+st.markdown("<h1 style='text-align: center; color: #FF8C5F;'>Will Google Hire You?</h1>",
             unsafe_allow_html=True)
 st.markdown(
-    "<h5 style='text-align: center; color: #FF8C5F;'>We use data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. We then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and determine in which predetermined class they fall.</h5>",
+    "<h5 style='text-align: center; color: #FFE77A;'>We use data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. We then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and determine in which predetermined class they fall.</h5>",
     unsafe_allow_html=True)
 
 option_xp_lvl = st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
