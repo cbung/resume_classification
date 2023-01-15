@@ -15,21 +15,25 @@ st.markdown(
 
 option_xp_lvl = st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
 if option_xp_lvl == '0-24 Months':
+    option_xp_lvl = "Junior"
     option_junior = 1
     option_mid = 0
     option_senior = 0
     option_master = 0
 elif option_xp_lvl == '24-60 Months':
+    option_xp_lvl = "Mid-Level"
     option_junior = 0
     option_mid = 1
     option_senior = 0
     option_master = 0
 elif option_xp_lvl == '60-120 Months':
+    option_xp_lvl = "Senior"
     option_junior = 0
     option_mid = 0
     option_senior = 1
     option_master = 0
 else:
+    option_xp_lvl = "Principal"
     option_junior = 0
     option_mid = 0
     option_senior = 0
@@ -37,14 +41,17 @@ else:
 
 option_highest_degree = st.sidebar.selectbox('Highest Academic Degree:', ("Bachelor's Degree", "Master's Degree", "Doctorate Degree", "Other"))
 if option_highest_degree == "Doctorate Degree":
+    option_highest_degree = "Doctor"
     option_bachelors = 0
     option_doctors = 1
     option_masters = 0
 elif option_highest_degree == "Master's Degree":
+    option_highest_degree = "Master"
     option_bachelors = 0
     option_doctors = 0
     option_masters = 1
 else:
+    option_highest_degree = "Bachelor"
     option_bachelors = 1
     option_doctors = 0
     option_masters = 0
@@ -83,8 +90,6 @@ if st.sidebar.button("Save Choices"):
 
     new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
 
-    # st.write("newuser: ", new_user_df.columns, "df: ", df.columns)
-
     new_user_pred = model.predict(new_user_df)
 
-    st.write(new_user_pred)
+    st.write(f"{option_xp_lvl}, {new_user_pred}, {option_highest_degree}".upper())
