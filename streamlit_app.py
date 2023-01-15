@@ -98,7 +98,7 @@ with col2:
         new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
 
         for percent_complete in range(100):
-            time.sleep(0.05)
+            time.sleep(0.01)
             my_bar.progress(percent_complete + 1)
         new_user_pred = model.predict(new_user_df)
 
