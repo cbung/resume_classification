@@ -7,10 +7,10 @@ from helper import *
 model = joblib.load("final_model.pkl")
 df = pd.read_csv("final_dataframe.csv").drop(columns="Unnamed: 0")
 
-st.markdown("<h1 style='text-align: center; color: #202124;'>Will Google Hire You?</h1>",
+st.markdown("<h1 style='text-align: center; color: #DE4032;'>Will Google Hire You?</h1>",
             unsafe_allow_html=True)
 st.markdown(
-    "<h5 style='text-align: center; color: #202124;'>We use data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. We then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and determine in which predetermined class they fall.</h5>",
+    "<h5 style='text-align: center; color: #EEB205;'>We use data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. We then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and determine in which predetermined class they fall.</h5>",
     unsafe_allow_html=True)
 
 option_xp_lvl = st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
@@ -93,5 +93,9 @@ if st.button("Which class am I"):
     new_user_pred = model.predict(new_user_df)
 
     st.write(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred[0]}".upper())
+st.markdown(""" div.stButton > button:first-child {
+background-color: #00cc00;color:white;font-size:20px;height:3em;width:30em;border-radius:10px 10px 10px 10px;
+}
+""", unsafe_allow_html=True)
 
-st.markdown("<h3 style='text-align: center; color: red;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: #1C9B41;'>Learn More About The Classes</h3>", unsafe_allow_html=True)
