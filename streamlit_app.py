@@ -108,27 +108,46 @@ with col2:
 
 all_segments = list(set(df["SEGMENT"].to_list()))
 if st.button("Learn More About The Classes"):
-    st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {segment}</h3>", unsafe_allow_html=True)
     if new_user_pred[0] == 0:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 0")
         # break
-    elif new_user_pred[0] == 0:
+    elif new_user_pred[0] == 1:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 1")
-    elif new_user_pred[0] == 0:
+    elif new_user_pred[0] == 2:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 2")
-    elif new_user_pred[0] == 0:
+    elif new_user_pred[0] == 3:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 3")
-    elif new_user_pred[0] == 0:
+    elif new_user_pred[0] == 4:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 4")
-    elif new_user_pred[0] == 0:
+    elif new_user_pred[0] == 5:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 5")
-    elif new_user_pred[0] == 0:
+    elif new_user_pred[0] == 6:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 6")
-    elif new_user_pred[0] == 0:
+    elif new_user_pred[0] == 7:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 7")
-    elif new_user_pred[0] == 0:
+    elif new_user_pred[0] == 8:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred[0]}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 8")
     else:
+        st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {segment}</h3>",
+                    unsafe_allow_html=True)
         st.write("Açıklama 9")
 
 
