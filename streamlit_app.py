@@ -4,16 +4,14 @@ import joblib
 import pandas as pd
 from helper import *
 
-
 model = joblib.load("final_model.pkl")
 df = pd.read_csv("final_dataframe.csv")
 
-
 st.markdown("<h1 style='text-align: center; color: ##00a6f9;'>Will Google Hire You?</h1>",
             unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: center; color: #1B9E91;'>We use data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. We then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and determine in which predetermined class they fall.</h5>",
-            unsafe_allow_html=True)
-
+st.markdown(
+    "<h5 style='text-align: center; color: #1B9E91;'>We use data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. We then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and determine in which predetermined class they fall.</h5>",
+    unsafe_allow_html=True)
 
 option_xp_lvl = st.sidebar.selectbox('Months Of Experience:', ('0-24 Months', '24-60 Months', "60-120 Months", "More Than 120 Months"))
 if option_xp_lvl == '0-24 Months':
@@ -25,7 +23,6 @@ elif option_xp_lvl == '60-120 Months':
 else:
     option_xp_lvl = "Master"
 
-
 option_highest_degree = st.sidebar.selectbox('Highest Academic Degree:', ("Bachelor's Degree", "Master's Degree", "Doctorate Degree", "Other"))
 if option_highest_degree == "Bachelor's Degree":
     option_highest_degree = "bachelor"
@@ -35,7 +32,6 @@ elif option_highest_degree == "Doctorate Degree":
     option_highest_degree = "doctor"
 else:
     option_highest_degree = "other"
-
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
 
@@ -51,6 +47,17 @@ new_user = {
     "skills": selected_skill_list
 }
 
-new_user = pd.Series(new_user)
+new_user_df = pd.DataFrame(new_user)
 
-st.write("You: ", new_user)
+st.write("You: ", new_user_df)
+
+# for ind_skill in selected_skill_list:
+#     newframe = pd.DataFrame()
+#     newframe[f"SKILL_{ind_skill}".upper()] = dataframe["skills"].apply(lambda x: 1 if ind_skill in x else 0)
+#     dataframe = pd.concat([dataframe, newframe], axis=1)
+
+
+
+
+
+
