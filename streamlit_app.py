@@ -52,7 +52,7 @@ new_user_df = pd.DataFrame(new_user)
 
 newframe = pd.DataFrame()
 for skill in skill_list:
-    newframe[f"SKILL_{skill}".upper()] = new_user_df["skills"].apply(lambda x: 0 if skill in x else 0)
+    newframe[f"SKILL_{skill}".upper()] = new_user_df["skills"].apply(lambda x: 0)
 
 new_user_df = pd.concat([new_user_df, newframe], axis=1)
 
