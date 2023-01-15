@@ -39,6 +39,6 @@ else:
 
 skill_list = [col[6:] for col in df.columns if col.__contains__("SKILL_")]
 
-option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, [], max_selections=100)
+option_skills = st.sidebar.multiselect("Skills (Can Select Multiple Choices):", skill_list, ["SQL"], max_selections=100)
 
-st.write("Your Skills: ", type(option_skills))
+st.write("Your Skills: ", type(option_skills[0]))
