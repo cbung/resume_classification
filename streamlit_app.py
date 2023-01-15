@@ -23,6 +23,7 @@ st.markdown(
 # else:
 #     option_xp_lvl = "Master"
 
+st.sidebar.header("Months Of Experience")
 option_junior = st.sidebar.checkbox('0-24 Months')
 option_mid = st.sidebar.checkbox('24-60 Months')
 option_senior = st.sidebar.checkbox('60-120 Months')
