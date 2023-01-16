@@ -118,7 +118,7 @@ with button2:
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0Açıklama 0")
+                st.write("Açıklama 0")
             elif new_user_pred == 1:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
                             unsafe_allow_html=True)
