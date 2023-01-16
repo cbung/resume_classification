@@ -102,6 +102,7 @@ with button2:
             for percent_complete in range(100):
                 time.sleep(0.02)
                 my_bar.progress(percent_complete + 1)
+            st.balloons()
 
             new_user_pred = model.predict(new_user_df)
             new_user_pred = new_user_pred[0]
@@ -118,8 +119,6 @@ with button2:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-1</h3>",
                             unsafe_allow_html=True)
                 st.write("Açıklama 0")
-                st.snow()
-                st.balloons()
             elif new_user_pred == 1:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-2</h3>",
                             unsafe_allow_html=True)
