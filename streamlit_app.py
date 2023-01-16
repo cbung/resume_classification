@@ -100,7 +100,7 @@ with button2:
             new_user_df = pd.concat([new_user_skill_df, new_user_xp_edu_df], axis=1)
 
             for percent_complete in range(100):
-                time.sleep(0.02)
+                time.sleep(0.0175)
                 my_bar.progress(percent_complete + 1)
             st.balloons()
 
