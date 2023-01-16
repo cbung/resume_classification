@@ -102,7 +102,7 @@ with button2:
             for percent_complete in range(100):
                 time.sleep(0.02)
                 my_bar.progress(percent_complete + 1)
-            st.balloons()
+            st.snow()
 
             new_user_pred = model.predict(new_user_df)
             new_user_pred = new_user_pred[0]
