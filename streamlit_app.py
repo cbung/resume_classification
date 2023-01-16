@@ -108,7 +108,7 @@ with button2:
             new_user_pred = new_user_pred[0]
 
             st.success(f"You are ..."
-                       f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred.capitalize()}")
+                       f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
 
             st.markdown("""---""")
 
