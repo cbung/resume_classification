@@ -80,14 +80,14 @@ for skill in skill_list:
     newframe[f"SKILL_{skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 0)
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
-col1, col2 = st.columns([3, 2])
+col1, col2, col3 = st.columns([2, 5, 2])
 my_bar = st.progress(0)
 
 from PIL import Image
 
 image = Image.open('background_image.jpg')
 st.image(image, use_column_width="always")
-with col1:
+with col2:
     if st.button("Find which class you are in"):
         for ind_skill in selected_skill_list[0]:
             new_user_skill_df[f"{ind_skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
