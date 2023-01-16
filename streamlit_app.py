@@ -108,8 +108,8 @@ with button2:
             # st.write("dataframe silinecek!")
             # st.write(new_user_df)
 
-            st.success(f"You are ... "
-                       f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+            # st.success(f"You are ... "
+            #            f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             image = Image.open(f'background_image/background_{new_user_pred}.png')
             st.image(image, use_column_width="always")
 
