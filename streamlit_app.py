@@ -87,7 +87,6 @@ button1, button2, button3 = st.columns([4, 3, 4])
 my_bar = st.progress(0)
 
 from PIL import Image
-
 st.markdown("""---""")
 with button2:
     if st.button("Which Class Are You"):
@@ -155,3 +154,6 @@ with button2:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-10</h3>",
                             unsafe_allow_html=True)
                 st.write("Açıklama 9")
+
+image_main = Image.open(f'background_image/background_main.jpg')
+st.image(image, use_column_width="always")
