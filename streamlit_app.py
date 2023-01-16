@@ -82,6 +82,10 @@ for skill in skill_list:
     newframe[f"SKILL_{skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 0)
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
+if not pred_button:
+    image_main = Image.open(f'background_image/background_main.jpg')
+    st.image(image_main, use_column_width="always")
+
 col1, col2, col3 = st.columns([1, 5, 1])
 button1, button2, button3 = st.columns([4, 3, 4])
 my_bar = st.progress(0)
@@ -156,6 +160,3 @@ with button2:
                             unsafe_allow_html=True)
                 st.write("Açıklama 9")
 
-if not pred_button:
-    image_main = Image.open(f'background_image/background_main.jpg')
-    st.image(image_main, use_column_width="always")
