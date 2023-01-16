@@ -113,8 +113,6 @@ with button2:
             image = Image.open(f'background_image/background_{new_user_pred}.png')
             st.image(image, use_column_width="always")
 
-            st.markdown("""---""")
-
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-1</h3>",
                             unsafe_allow_html=True)
