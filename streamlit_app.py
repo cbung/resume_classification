@@ -88,7 +88,7 @@ my_bar = st.progress(0)
 
 from PIL import Image
 
-image = Image.open('background_image.jpg')
+image = Image.open('background_1.png')
 st.image(image, use_column_width="always")
 with button2:
     if st.button("Which Class Are You"):
