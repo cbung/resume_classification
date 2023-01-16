@@ -91,10 +91,10 @@ my_bar = st.progress(0)
 from PIL import Image
 st.markdown("""---""")
 with button2:
+    pred_button = st.button("Which Class Are You")
     if not pred_button:
         image_main = Image.open(f'background_image/background_main.jpg')
         st.image(image_main, use_column_width="always")
-    pred_button = st.button("Which Class Are You")
     if pred_button:
         with col2:
             for ind_skill in selected_skill_list[0]:
