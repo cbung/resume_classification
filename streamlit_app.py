@@ -82,13 +82,12 @@ for skill in skill_list:
     newframe[f"SKILL_{skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 0)
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
-
-
 col1, col2, col3 = st.columns([1, 5, 1])
 button1, button2, button3 = st.columns([4, 3, 4])
 my_bar = st.progress(0)
 
 from PIL import Image
+
 st.markdown("""---""")
 with button2:
     pred_button = st.button("Which Class Are You")
@@ -120,43 +119,53 @@ with button2:
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-1</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 0")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 1:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-2</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 1")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 2:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-3</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 2")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 3:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-4</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 3")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 4:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-5</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 4")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 5:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-6</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 5")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 6:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-7</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 6")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 7:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-8</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 7")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 8:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-9</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 8")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             else:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-10</h3>",
                             unsafe_allow_html=True)
-                st.write("Açıklama 9")
+                st.write(f"You are ... "
+                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
 
 if not pred_button:
     image_main = Image.open(f'background_image/background_main.jpg')
