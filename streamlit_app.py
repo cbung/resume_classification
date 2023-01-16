@@ -88,8 +88,8 @@ my_bar = st.progress(0)
 
 from PIL import Image
 
+st.markdown("""---""")
 with button2:
-    st.markdown("""---""")
     if st.button("Which Class Are You"):
         with col2:
             for ind_skill in selected_skill_list[0]:
