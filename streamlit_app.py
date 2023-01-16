@@ -71,7 +71,6 @@ selected_skill_list = [[]]
 for ind_skill in enumerate(option_skills):
     selected_skill_list[0].append(f"SKILL_{ind_skill[1]}")
 
-
 new_user_skill = {"skills": selected_skill_list}
 
 new_user_skill_df = pd.DataFrame(new_user_skill)
@@ -81,11 +80,11 @@ for skill in skill_list:
     newframe[f"SKILL_{skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 0)
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
-
 col1, col2, col3 = st.columns(3)
 my_bar = st.progress(0)
 
 from PIL import Image
+
 image = Image.open('background_image.jpg')
 st.image(image, use_column_width="always")
 with col2:
@@ -106,49 +105,43 @@ with col2:
 
         st.success(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred}".upper())
 
-        if st.button("Learn More About The Classes"):
-            if new_user_pred == 0:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 0")
-            elif new_user_pred == 1:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 1")
-            elif new_user_pred == 2:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 2")
-            elif new_user_pred == 3:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 3")
-            elif new_user_pred == 4:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 4")
-            elif new_user_pred == 5:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 5")
-            elif new_user_pred == 6:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 6")
-            elif new_user_pred == 7:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 7")
-            elif new_user_pred == 8:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 8")
-            else:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
-                            unsafe_allow_html=True)
-                st.write("Açıklama 9")
-
-
-
-
-
+        if new_user_pred == 0:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 0")
+        elif new_user_pred == 1:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 1")
+        elif new_user_pred == 2:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 2")
+        elif new_user_pred == 3:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 3")
+        elif new_user_pred == 4:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 4")
+        elif new_user_pred == 5:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 5")
+        elif new_user_pred == 6:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 6")
+        elif new_user_pred == 7:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 7")
+        elif new_user_pred == 8:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 8")
+        else:
+            st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
+                        unsafe_allow_html=True)
+            st.write("Açıklama 9")
