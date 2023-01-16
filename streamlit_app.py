@@ -156,4 +156,4 @@ with button2:
                 st.write("Açıklama 9")
 
 image_main = Image.open(f'background_image/background_main.jpg')
-st.image(image, use_column_width="always")
+st.image(image_main, use_column_width="always")
