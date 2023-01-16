@@ -158,6 +158,6 @@ with button2:
                             unsafe_allow_html=True)
                 st.write("Açıklama 9")
 
-    if not pred_button:
-        image_main = Image.open(f'background_image/background_main.jpg')
-        st.image(image_main, use_column_width="always")
+if not pred_button:
+    image_main = Image.open(f'background_image/background_main.jpg')
+    st.image(image_main, use_column_width="always")
