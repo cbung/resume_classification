@@ -83,7 +83,7 @@ for skill in skill_list:
 new_user_skill_df = pd.concat([new_user_skill_df, newframe], axis=1)
 
 col1, col2, col3 = st.columns([1, 5, 1])
-button1, button2, button3 = st.columns([4, 2, 4])
+button1, button2, button3 = st.columns([4, 3, 4])
 my_bar = st.progress(0)
 
 from PIL import Image
