@@ -89,7 +89,8 @@ my_bar = st.progress(0)
 from PIL import Image
 st.markdown("""---""")
 with button2:
-    if st.button("Which Class Are You"):
+    pred_button = st.button("Which Class Are You")
+    if pred_button:
         with col2:
             for ind_skill in selected_skill_list[0]:
                 new_user_skill_df[f"{ind_skill}".upper()] = new_user_skill_df["skills"].apply(lambda x: 1 if ind_skill in x else 0)
@@ -155,5 +156,6 @@ with button2:
                             unsafe_allow_html=True)
                 st.write("Açıklama 9")
 
-image_main = Image.open(f'background_image/background_main.jpg')
-st.image(image_main, use_column_width="always")
+while not pred_button:
+    image_main = Image.open(f'background_image/background_main.jpg')
+    st.image(image_main, use_column_width="always")
