@@ -107,7 +107,7 @@ with button2:
             new_user_pred = model.predict(new_user_df)
             new_user_pred = new_user_pred[0]
 
-            image = Image.open(f'background_{new_user_pred}.png')
+            image = Image.open(f'background_image/background_{new_user_pred}.png')
             st.image(image, use_column_width="always")
 
             st.write("dataframe silinecek!")
