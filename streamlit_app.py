@@ -105,7 +105,7 @@ with col2:
 
         st.success(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred}".upper())
 
-        with col1, col2, col3
+        with col1, col2, col3:
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is {new_user_pred}</h3>",
                             unsafe_allow_html=True)
