@@ -107,7 +107,8 @@ with button2:
             new_user_pred = model.predict(new_user_df)
             new_user_pred = new_user_pred[0]
 
-            st.success(f"{option_highest_degree}, {option_xp_lvl}, {new_user_pred}".upper())
+            st.success(f"You are ..."
+                       f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred.capitalize()}")
 
             st.markdown("""---""")
 
