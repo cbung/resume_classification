@@ -167,7 +167,7 @@ with button2:
                             unsafe_allow_html=True)
                 st.write(f"You are ... "
                          f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
-            if length_skills < 10:
+            if length_skills < 15:
                 st.warning(f"Please consider giving more information. That way I can give you more accurate predictions.\n"
                            f"(Add other skills you have etc.)")
 
