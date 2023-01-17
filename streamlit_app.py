@@ -120,8 +120,7 @@ with button2:
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, The Up-And-Comers\n"
+                st.write(f"You are {option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, The Up-And-Comers\n\n"
                          f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             elif new_user_pred == 1:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-2</h3>",
