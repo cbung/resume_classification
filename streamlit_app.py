@@ -74,6 +74,7 @@ for ind_skill in enumerate(option_skills):
     selected_skill_list[0].append(f"SKILL_{ind_skill[1]}")
 
 new_user_skill = {"skills": selected_skill_list}
+length_skills = len(selected_skill_list[0])
 
 new_user_skill_df = pd.DataFrame(new_user_skill)
 
@@ -127,7 +128,7 @@ with button2:
                 st.write(f"You are ... "
                          f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             elif new_user_pred == 2:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-3</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>You are in PlaceholderClass-3's</h3>",
                             unsafe_allow_html=True)
                 st.write(f"You are ... "
                          f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
@@ -166,6 +167,8 @@ with button2:
                             unsafe_allow_html=True)
                 st.write(f"You are ... "
                          f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+            if length_skills < 10:
+                st.warning("Please consider giving more information. Add other skills you have etc.")
 
 if not pred_button:
     image_main = Image.open(f'background_image/background_main.jpg')
