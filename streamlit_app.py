@@ -168,7 +168,8 @@ with button2:
                 st.write(f"You are ... "
                          f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             if length_skills < 10:
-                st.warning("Please consider giving more information. Add other skills you have etc.")
+                st.warning(f"Please consider giving more information. Add other skills you have etc."
+                           f"That way I can give you more accurate predictions.")
 
 if not pred_button:
     image_main = Image.open(f'background_image/background_main.jpg')
