@@ -116,8 +116,8 @@ with button2:
             #            f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             image = Image.open(f'background_image/background_{new_user_pred}.png')
             st.image(image, use_column_width="always")
-
-            text_file = st.text("class_descriptions/class_description_0.txt")
+            
+            text_file = st.("class_descriptions/class_description_0.txt")
             st.write(text_file)
             # if text_file:
             #     for line in text_file:
