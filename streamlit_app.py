@@ -126,7 +126,7 @@ with button2:
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+                st.success(f"You are a -> {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
                 st.write(description_0())
             elif new_user_pred == 1:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Essentialists</h3>",
@@ -166,12 +166,12 @@ with button2:
             elif new_user_pred == 8:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Visualizers</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Visualizer\n\n")
+                st.success(f"You are a -> {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Visualizer\n\n")
                 st.write(description_8())
             else:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The DBAs</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | DBA\n\n")
+                st.success(f"You are a -> {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | DBA\n\n")
                 st.write(description_9())
             if length_skills < 20:
                 st.warning(f"Please consider giving more information. That way I can give you more accurate predictions.\n"
