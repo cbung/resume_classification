@@ -117,10 +117,10 @@ with button2:
             image = Image.open(f'background_image/background_{new_user_pred}.png')
             st.image(image, use_column_width="always")
 
-            text_file = st.file_uploader("class_descriptions/class_description_0.txt")
-            if text_file:
-                for line in text_file:
-                    st.write(line)
+            text_file = st.text("class_descriptions/class_description_0.txt")
+            st.write(text_file)
+            # if text_file:
+            #     for line in text_file:
 
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
