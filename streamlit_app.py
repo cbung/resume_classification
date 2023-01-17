@@ -3,6 +3,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 from helper import *
+from class_description import *
 
 model = joblib.load("final_model.pkl")
 df = pd.read_csv("final_dataframe.csv").drop(columns="Unnamed: 0")
@@ -116,17 +117,17 @@ with button2:
             #            f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             image = Image.open(f'background_image/background_{new_user_pred}.png')
             st.image(image, use_column_width="always")
-            
-            text_file = st.("class_descriptions/class_description_0.txt")
-            st.write(text_file)
-            # if text_file:
-            #     for line in text_file:
 
+            # if new_user_pred == 0:
+            #     st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+            #                 unsafe_allow_html=True)
+            #     st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+            #     st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
                 st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.write(description_0())
             elif new_user_pred == 1:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Essentialists</h3>",
                             unsafe_allow_html=True)
