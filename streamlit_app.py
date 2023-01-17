@@ -132,47 +132,47 @@ with button2:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Essentialists</h3>",
                             unsafe_allow_html=True)
                 st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Essentialist\n\n")
-                st.write(f'This class consists the people who have a basic set of skills, including Python, SQL, Data Analysis, R, and Machine Learning. They are likely entry-level data professionals who are just starting to build their skillset. They are a group of individuals who possess a strong foundation of core data skills. They are proficient in Python, SQL, R, Machine Learning, and Data Analysis. They may not have a lot of specialized skills in other areas, but they have a solid understanding of the building blocks of data science. This class is likely to be composed of entry-level data professionals or those who are still early in their careers. They could be working as data analysts, data engineers, or data scientists in various industries, and they are well-suited for positions that require a strong understanding of data basics. These individuals are a valuable asset to any team and have the potential to become experts in their field with further training and experience.')
+                st.write(description_1())
             elif new_user_pred == 2:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Microsoft Masters</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Office Ninjas</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Microsoft Master\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Office Ninja\n\n")
+                st.write(description_2())
             elif new_user_pred == 3:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Statisticians</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Statistician\n\n")
+                st.write(description_3())
             elif new_user_pred == 4:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Data Generalists</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Data Generalist\n\n")
+                st.write(description_4())
             elif new_user_pred == 5:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Statistical Geniuses</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Statistical Genius\n\n")
+                st.write(description_5())
             elif new_user_pred == 6:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Tech Savvies</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Tech Savvy\n\n")
+                st.write(description_6())
             elif new_user_pred == 7:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The All-Rounders</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | All-Rounder\n\n")
+                st.write(description_7())
             elif new_user_pred == 8:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Visualizers</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Visualizer\n\n")
+                st.write(description_8())
             else:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The DBAs</h3>",
                             unsafe_allow_html=True)
-                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | DBA\n\n")
+                st.write(description_9())
             if length_skills < 20:
                 st.warning(f"Please consider giving more information. That way I can give you more accurate predictions.\n"
                            f"(Add other skills you have etc.)")
