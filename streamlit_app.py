@@ -117,56 +117,61 @@ with button2:
             image = Image.open(f'background_image/background_{new_user_pred}.png')
             st.image(image, use_column_width="always")
 
+            text_file = st.file_uploader("class_descriptions/class_description_0.txt")
+            if uploaded_file:
+                for line in uploaded_file:
+                    st.write(line)
+
             if new_user_pred == 0:
                 st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
                 st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
                 st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             elif new_user_pred == 1:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-2</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Essentialists</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Essentialist\n\n")
+                st.write(f'This class consists the people who have a basic set of skills, including Python, SQL, Data Analysis, R, and Machine Learning. They are likely entry-level data professionals who are just starting to build their skillset. They are a group of individuals who possess a strong foundation of core data skills. They are proficient in Python, SQL, R, Machine Learning, and Data Analysis. They may not have a lot of specialized skills in other areas, but they have a solid understanding of the building blocks of data science. This class is likely to be composed of entry-level data professionals or those who are still early in their careers. They could be working as data analysts, data engineers, or data scientists in various industries, and they are well-suited for positions that require a strong understanding of data basics. These individuals are a valuable asset to any team and have the potential to become experts in their field with further training and experience.')
             elif new_user_pred == 2:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>You are in PlaceholderClass-3's</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Microsoft Masters</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Microsoft Master\n\n")
+                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             elif new_user_pred == 3:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-4</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             elif new_user_pred == 4:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-5</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             elif new_user_pred == 5:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-6</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             elif new_user_pred == 6:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-7</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             elif new_user_pred == 7:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-8</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             elif new_user_pred == 8:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-9</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             else:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is PlaceholderClass-10</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
-                st.write(f"You are ... "
-                         f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
+                st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
+                st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             if length_skills < 20:
                 st.warning(f"Please consider giving more information. That way I can give you more accurate predictions.\n"
                            f"(Add other skills you have etc.)")
