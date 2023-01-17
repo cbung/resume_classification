@@ -118,8 +118,8 @@ with button2:
             st.image(image, use_column_width="always")
 
             text_file = st.file_uploader("class_descriptions/class_description_0.txt")
-            if uploaded_file:
-                for line in uploaded_file:
+            if text_file:
+                for line in text_file:
                     st.write(line)
 
             if new_user_pred == 0:
