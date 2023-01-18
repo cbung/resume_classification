@@ -88,6 +88,8 @@ col1, col2, col3 = st.columns([1, 5, 1])
 button1, button2, button3 = st.columns([4, 3, 4])
 my_bar = st.progress(0)
 
+st.write(df["SEGMENT"].value_counts())
+
 from PIL import Image
 
 st.markdown("""---""")
