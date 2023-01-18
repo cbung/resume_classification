@@ -8,7 +8,7 @@ from class_descriptions import *
 model = joblib.load("final_model.pkl")
 df = pd.read_csv("final_dataframe.csv").drop(columns="Unnamed: 0")
 
-st.markdown("<h1 style='text-align: center; color: #e6f2ff;'>WHAT IS YOUR CLASS?</h1>",
+st.markdown("<h1 style='text-align: center; color: #e6f2ff;'>Which IT Monster Are You?</h1>",
             unsafe_allow_html=True)
 st.markdown(
     "<h5 style='text-align: center; color: #80b3ff;'>Used the data from individuals working in data-related professions at large companies such as Google and Amazon to create a machine learning model. Then utilize this model to provide individuals who desire to work at these companies the opportunity to compare themselves to the existing employees and find out which predetermined class they fall into.</h5>",
@@ -92,7 +92,7 @@ from PIL import Image
 
 st.markdown("""---""")
 with button2:
-    pred_button = st.button("Which Class Are You")
+    pred_button = st.button("Find Out")
     if pred_button:
         with col2:
             for ind_skill in selected_skill_list[0]:
