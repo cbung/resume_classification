@@ -174,8 +174,8 @@ with button2:
                 st.success(f"You are a -> {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | DBA\n\n")
                 st.write(description_9())
             if length_skills < 20:
-                st.warning(f"Please consider giving more information. That way I can give you more accurate predictions.\n"
-                           f"(Add other skills you have etc.)")
+                st.warning(f"Please consider giving more skills you have. That way I can give you more accurate predictions.\n"
+                           f"Keep in mind that this predictions might not fully represent your skillset. It will predict the closest class with the data you provided.")
 
 if not pred_button:
     image_main = Image.open(f'background_image/background_main.jpg')
