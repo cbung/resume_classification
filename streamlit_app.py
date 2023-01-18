@@ -89,8 +89,8 @@ button1, button2, button3 = st.columns([4, 3, 4])
 my_bar = st.progress(0)
 
 from PIL import Image
-
-st.markdown("""---""")
+#
+# st.markdown("""---""")
 with button2:
     pred_button = st.button("Let's Find Out")
     if pred_button:
