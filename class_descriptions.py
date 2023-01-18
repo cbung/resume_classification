@@ -170,6 +170,6 @@ def description_9():
     Business Intelligence Analysts in various industries, utilizing their skills to 
     manage and analyze large sets of data. They may also be responsible for maintaining 
     the performance and security of a company's databases and troubleshooting any issues 
-    that may arise. Overall, this cluster represents a specialized subset of data 
+    that may arise. Overall, this class represents a specialized subset of data 
     professionals with a specific focus on database management and administration.
     """
