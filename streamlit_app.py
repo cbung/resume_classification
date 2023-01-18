@@ -92,7 +92,7 @@ from PIL import Image
 
 st.markdown("""---""")
 with button2:
-    pred_button = st.button("Find Out")
+    pred_button = st.button("Let's Find Out")
     if pred_button:
         with col2:
             for ind_skill in selected_skill_list[0]:
