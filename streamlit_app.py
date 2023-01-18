@@ -5,6 +5,8 @@ import pandas as pd
 from helper import *
 from class_descriptions import *
 
+st.experimental_memo
+
 model = joblib.load("final_model.pkl")
 df = pd.read_csv("final_dataframe.csv").drop(columns="Unnamed: 0")
 
