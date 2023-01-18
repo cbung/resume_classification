@@ -129,7 +129,7 @@ with button2:
                 st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Office Ninja\n\n")
                 st.write(description_2())
             elif new_user_pred == 3:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Statisticians</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #173928;'>Your Class is The Statisticians</h3>",
                             unsafe_allow_html=True)
                 st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Statistician\n\n")
                 st.write(description_3())
