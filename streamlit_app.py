@@ -110,21 +110,11 @@ with button2:
             new_user_pred = model.predict(new_user_df)
             new_user_pred = new_user_pred[0]
 
-            # st.write("dataframe silinecek!")
-            # st.write(df["SEGMENT"].value_counts())
-
-            # st.success(f"You are ... "
-            #            f"{option_highest_degree.capitalize()}, {option_xp_lvl.capitalize()}, {new_user_pred}")
             image = Image.open(f'background_image/background_{new_user_pred}.png')
             st.image(image, use_column_width="always")
 
-            # if new_user_pred == 0:
-            #     st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
-            #                 unsafe_allow_html=True)
-            #     st.success(f"You are a {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
-            #     st.write(f'This class consists the people who can be considered "Beginner" or "Entry-level", as these individuals seem to have the least number of skills and the lowest skill levels among the other classes. They may be new to the field or just starting out in their careers.')
             if new_user_pred == 0:
-                st.markdown(f"<h3 style='text-align: center; color: #1C9B41;'>Your Class is The Up-And-Comers</h3>",
+                st.markdown(f"<h3 style='text-align: center; color: #173928;'>Your Class is The Up-And-Comers</h3>",
                             unsafe_allow_html=True)
                 st.success(f"You are a -> {option_highest_degree.capitalize()} | {option_xp_lvl.capitalize()} | Up-And-Comer\n\n")
                 st.write(description_0())
