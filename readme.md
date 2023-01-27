@@ -23,8 +23,8 @@ I used the data from individuals working in data-related professions at big tech
     - education_end_x: Education end date
 
 - Three Languages they know
-    - language_x: Name of the languages 1 through 3
-    - language_proficiency_x: Proficiency of the languages 1 through 3
+    - language_x: Name of the language
+    - language_proficiency_x: Proficiency of the language
 
 - languages: All languages they know
 - skills: All skills they have
